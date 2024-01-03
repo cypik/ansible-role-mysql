@@ -1,0 +1,15 @@
+---
+# default variables for mysql-server role
+
+mysql_root_password: "yadav55655565"
+mysql_user_host: "%"
+
+mysql_databases:
+  - { database: "1db8" }
+  - { database: "2db2" }
+  - { database: "3db4" }
+
+mysql_users:
+  - { user: "1user", password: "password5", database: "1db8" }
+  - { user: "2user", password: "password6", database: "2db2" }
+  - { user: "3user", password: "password7", database: "3db4" }

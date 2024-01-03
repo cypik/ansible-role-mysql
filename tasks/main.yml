@@ -1,0 +1,45 @@
+---
+# roles/mysql-server/tasks/main.yml
+
+- name: Install MySQL server
+  apt:
+    name: mysql-server
+    state: present
+  become: true
+
+- name: Secure MySQL installation
+  mysql_user:
+    name: root
+    host: "{{ mysql_user_host | default('localhost') }}"
+    password: "{{ mysql_root_password }}"
+    login_unix_socket: "/var/run/mysqld/mysqld.sock"
+    priv: "*.*:ALL,GRANT"
+    state: present
+
+
+- name: Create MySQL databases and users
+  mysql_db:
+    name: "{{ item.database }}"
+    state: present
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+    login_unix_socket: "/var/run/mysqld/mysqld.sock"
+    encoding: utf8
+    collation: utf8_general_ci
+  with_items: "{{ mysql_databases }}"
+  tags:
+    - mysql
+
+- name: Create MySQL users and grant privileges
+  mysql_user:
+    name: "{{ item.user }}"
+    password: "{{ item.password }}"
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+    host: "%"
+    login_unix_socket: "/var/run/mysqld/mysqld.sock"
+    priv: "*.*:ALL,GRANT"
+    state: present
+  with_items: "{{ mysql_users }}"
+  tags:
+    - mysql
