@@ -8,8 +8,8 @@
 This Ansible role is designed to manage MySQL databases and users on Ubuntu 22.04.
 
 ## Table of Contents
-- [Example Playbook](#Example Playbook)
-- [Role Variables](#Role Variables)
+- [Example Playbook](#Example-Playbook)
+- [Role Variables](#Role-Variables)
 - [License](#license)
 
 
