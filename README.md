@@ -5,7 +5,7 @@
     Ansible Role Mysql
 </h1>
 
-This Ansible role is designed to manage MySQL databases and users on Ubuntu 22.04.
+This Ansible role is designed to manage MySQL databases and users on Ubuntu.
 
 ## Table of Contents
 - [Example Playbook](#Example-Playbook)
