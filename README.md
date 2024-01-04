@@ -5,11 +5,11 @@
     Ansible Role Mysql
 </h1>
 
-This Ansible role is designed to manage MySQL databases and users on Ubuntu 22.04.
+This Ansible role is designed to manage MySQL databases and users on Ubuntu.
 
 ## Table of Contents
-- [Example Playbook](#Example Playbook)
-- [Role Variables](#Role Variables)
+- [Example Playbook](#Example-Playbook)
+- [Role Variables](#Role-Variables)
 - [License](#license)
 
 
@@ -43,12 +43,12 @@ mysql_databases:
   - { database: "1db8" }
   - { database: "2db2" }
   - { database: "3db4" }
-    
+
 
 mysql_users:
   - { user: "1user", password: "password5", database: "1db8" }
   - { user: "2user", password: "password6", database: "2db2" }
-  - { user: "3user", password: "password7", database: "3db4" } 
+  - { user: "3user", password: "password7", database: "3db4" }
 ```
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/cypik/ansible-role-mysql/blob/master/LICENSE) file for details.
