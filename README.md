@@ -50,6 +50,10 @@ mysql_users:
   - { user: "2user", password: "password6", database: "2db2" }
   - { user: "3user", password: "password7", database: "3db4" }
 ```
+## About us
+
+At [Cypik][website], we offer expert guidance, implementation support and services to help organisations accelerate their journey to the cloud. Our services include docker and container orchestration, cloud migration and adoption, infrastructure automation, application modernisation and remediation, and performance engineering.
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/cypik/ansible-role-mysql/blob/master/LICENSE) file for details.
 
